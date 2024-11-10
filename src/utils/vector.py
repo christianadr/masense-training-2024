@@ -6,8 +6,10 @@ import scipy.fft
 from sklearn.preprocessing import MinMaxScaler
 from tqdm import tqdm
 
-from src.preprocessing.mqft import MQFT
-
+try:
+    from src.preprocessing.mqft import MQFT
+except:
+    pass
 
 def get_kwargs_code():
     """Used for generating directory names.
